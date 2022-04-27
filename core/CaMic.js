@@ -19,7 +19,7 @@ class CaMic {
   */
   constructor(divId, slideQuery, options) {
     Loading.open(document.body, 'CaMicroscope Is Initializing...');
-    // initalize viewer
+    // initialize viewer
     this.setting = {
       id: divId,
       prefixUrl: 'images/',
@@ -51,7 +51,7 @@ class CaMic {
 
     this.slideQuery = slideQuery;
     this.slideId = slideQuery.id;
-    // initalize store
+    // initialize store
     this.store = new Store('../../data/', $VALIDATION);
     // load image
     // set overlay thing
@@ -59,7 +59,7 @@ class CaMic {
   }
 
   /**
-   * initialize the CAMIC and the dependenced components
+   * initialize the CAMIC and the depending components
    */
   init() {
     this.viewer.controls.bottomright.style.zIndex = 600;
@@ -123,7 +123,7 @@ class CaMic {
       }
     }.bind(this));
 
-    // create draw pulgin
+    // create draw plugin
     this.createCanvasDraw();
     this.createOverlayers();
 
